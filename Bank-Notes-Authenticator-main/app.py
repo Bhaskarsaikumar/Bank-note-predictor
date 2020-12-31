@@ -23,7 +23,7 @@ def predict():
         curtosis = float(request.form['curtosis'])
         entropy = float(request.form['entropy'])
         
-        prediction=classifier.predict([[variance,skewness,curtosis,entropy]])
+        prediction=model.predict([[variance,skewness,curtosis,entropy]])
         
         return render_template('result.html', prediction=prediction)
 
